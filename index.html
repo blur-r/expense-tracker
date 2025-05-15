@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/95a2002ecf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>TRACK YOUR EXPENSE</h1>
+    <div class="amt-display">
+        <div class="amt">
+            <p>BALANCE</p>
+            <P>$<span id="balance">1200.00</span> </P>
+        </div>
+        <div class="amt">
+            <p>INCOME</p>
+            <P style="color: #026133;">$<span id="income">1200.00</span> </P>
+        </div>
+        <div class="amt">
+            <p>EXPENSE</p>
+            <P style="color: #9B0404;">$<span id="expense">1200.00</span> </P>
+        </div>
+        <button id="reset">
+            RESET
+        </button>
+    </div>
+
+    <div class="update">
+        <form action="" id="income-form">
+            <p>ADD NEW INCOME</p>
+            <input type="text" placeholder="Name">
+            <input type="number" placeholder="Amount">
+            <button type="submit">ADD</button>
+        </form>
+
+        <form action="" class="expense-form">
+            <p>ADD NEW EXPENSE</p>
+            <input type="text" placeholder="Name">
+            <input type="number" placeholder="Amount">
+            <button type="submit">ADD</button>
+        </form>
+
+    </div>
+
+    <div class="history">
+        <p class="history-header">HISTORY</p>
+        <div class="history-container">
+            <div class="entries">
+                <p><i class="fa-solid fa-pen-to-square"></i> Salary</p>
+                <p>+$1200 <i class="fa-solid fa-trash"></i></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Reset Confirmation Modal -->
+    <div id="reset-modal" class="modal">
+        <div class="modal-content">
+            <h3>Confirm Reset</h3>
+            <p>Are you sure you want to reset all transactions?</p>
+            <div class="modal-buttons">
+                <button id="confirm-reset">Yes, Reset</button>
+                <button id="cancel-reset">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Transaction Modal -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <h3>Edit Entry</h3>
+            <form id="edit-form">
+                <input type="text" id="edit-name" placeholder="Name" required>
+                <input type="number" id="edit-amount" placeholder="Amount" required>
+                <div class="modal-buttons trans-btn">
+                    <button type="submit">Save Changes</button>
+                    <button type="button" id="cancel-edit">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+
+</body>
+
+</html>
